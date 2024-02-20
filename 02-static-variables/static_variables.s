@@ -15,7 +15,7 @@
 	// allocate_data <name>, <size>, [alignment]
 	.comm	a,8,8	
 // ------------------
-// .text?
+// .text (default)
 	.local	b
 	.comm	b,8,8
 // ------------------
@@ -32,7 +32,7 @@
 		.quad	42
 
 // ------------------
-// .text?
+// .text (default)
 	.local	d
 	.comm	d,8,8
 // ------------------
