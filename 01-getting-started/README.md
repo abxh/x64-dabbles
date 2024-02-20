@@ -21,7 +21,7 @@ The following are the things I done to compile, debug and get a better sense of 
 
 It's interesting to look at `hexdump -C hello_world.o`.
 
-## Debugging the "Hello World" progra
+## Debugging the "Hello World" program
 
 For this part, I used this [article](https://www.cs.swarthmore.edu/~newhall/cs31/resources/ia32_gdb.php).
 
