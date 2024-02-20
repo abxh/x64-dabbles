@@ -28,25 +28,27 @@
 
 	// quad (64-bit) with value 42
 	c:
-		.quad	42 
+		.quad	42
 
+// ------------------
+// .text?
 	.local	d
 	.comm	d,8,8
 // ------------------
-	// read-only data
-	.section	.rodata 
-			.align 8
-			.type	e, @object
-			.size	e, 8
-		e:
-			// fill number with zeroes
-			.zero	8 
+// read-only data
+.section	.rodata 
+		.align 8
+		.type	e, @object
+		.size	e, 8
+	e:
+		// fill number with zeroes
+		.zero	8 
 
-			.align 8
-			.type	f, @object
-			.size	f, 8
-		f:
-			.quad	43 
+		.align 8
+		.type	f, @object
+		.size	f, 8
+	f:
+		.quad	43 
 // ------------------
-		.ident	"GCC: (GNU) 13.2.0"
-		.section	.note.GNU-stack,"",@progbits
+	.ident	"GCC: (GNU) 13.2.0"
+	.section	.note.GNU-stack,"",@progbits
