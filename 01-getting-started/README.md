@@ -1,6 +1,9 @@
 # Getting started
 
-I in general followed along this [video](https://www.youtube.com/watch?v=6S5KRJv-7RU).
+I in general followed along this [video](https://www.youtube.com/watch?v=6S5KRJv-7RU) for the assembly code. I cannot
+remember much of the syntax.
+
+The following are the things I done to compile, debug and get a better sense of how things work:
 
 ## Exit successfully
 
