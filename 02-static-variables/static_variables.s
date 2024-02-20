@@ -36,7 +36,7 @@
 	.local	d
 	.comm	d,8,8
 // ------------------
-// read-only data
+// read-only data section
 .section	.rodata 
 		.align 8
 		.type	e, @object
