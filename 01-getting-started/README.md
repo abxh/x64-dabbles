@@ -18,8 +18,7 @@ The following are the things I done to compile, debug and get a better sense of 
 2. Link file(s) together with `ld hello_world.o -o hello_world.out`.
 3. Disassemble executable file to intel-style assembly with `objdump -M intel -dz hello_world.out`.
    (`-z` to include padding or `nop` instructions)
-4. Disassemble entire file with `-Dz` instead. Run `hexdump -C` to attempt to view the file in
-   human readable format.
+4. Disassemble entire file with `-Dz` instead. Run `hexdump -C` to attempt to read the asci bytes and other things.
 
 It's interesting to look at `hexdump -C hello_world.o`.
 
