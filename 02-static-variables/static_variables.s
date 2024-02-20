@@ -14,7 +14,8 @@
 	.local	a       
 	// allocate_data <name>, <size>, [alignment]
 	.comm	a,8,8	
-
+// ------------------
+// .text?
 	.local	b
 	.comm	b,8,8
 // ------------------
