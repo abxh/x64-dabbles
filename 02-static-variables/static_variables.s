@@ -50,6 +50,5 @@
 		.size	f, 8
 	f:
 		.quad	43 
-// ------------------
 	.ident	"GCC: (GNU) 13.2.0"
 	.section	.note.GNU-stack,"",@progbits
