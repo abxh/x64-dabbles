@@ -1,26 +1,27 @@
 # Getting started
 
-I in general followed along this [video](https://www.youtube.com/watch?v=6S5KRJv-7RU).
+I in general followed along this [video](https://www.youtube.com/watch?v=6S5KRJv-7RU) for the assembly code.
+
+The following are the things I done to compile, debug and get a better sense of how things work:
 
 ## Exit successfully
 
-1. Run `asm exit.S -o exit.o`.
+1. Run `as exit.S -o exit.o`.
 2. Link file(s) together with `ld exit.o -o exit.out`.
 3. Check the exit code with `echo $?`.
 4. Disassemble executable file to intel-style assembly with `objdump -M intel -d exit.out`.
 
 ## "Hello World" program
 
-1. Run `asm hello_world.S -o hello_world.o`.
+1. Run `as hello_world.S -o hello_world.o`.
 2. Link file(s) together with `ld hello_world.o -o hello_world.out`.
 3. Disassemble executable file to intel-style assembly with `objdump -M intel -dz hello_world.out`.
    (`-z` to include padding or `nop` instructions)
-4. Disassemble entire file with `-Dz` instead. Run `hexdump -C` to attempt to view the file in
-   human readable format.
+4. Disassemble entire file with `-Dz` instead. Run `hexdump -C` to attempt to read the asci bytes and other things.
 
 It's interesting to look at `hexdump -C hello_world.o`.
 
-## Debugging the "Hello World" progra
+## Debugging the "Hello World" program
 
 For this part, I used this [article](https://www.cs.swarthmore.edu/~newhall/cs31/resources/ia32_gdb.php).
 
