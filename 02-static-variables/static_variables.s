@@ -14,7 +14,8 @@
 	.local	a       
 	// allocate_data <name>, <size>, [alignment]
 	.comm	a,8,8	
-
+// ------------------
+// .text (switch to default segment)
 	.local	b
 	.comm	b,8,8
 // ------------------
@@ -28,25 +29,26 @@
 
 	// quad (64-bit) with value 42
 	c:
-		.quad	42 
+		.quad	42
 
+// ------------------
+// .text (switch to default segment)
 	.local	d
 	.comm	d,8,8
 // ------------------
-	// read-only data
-	.section	.rodata 
-			.align 8
-			.type	e, @object
-			.size	e, 8
-		e:
-			// fill number with zeroes
-			.zero	8 
+// read-only data section
+.section	.rodata 
+		.align 8
+		.type	e, @object
+		.size	e, 8
+	e:
+		// fill number with zeroes
+		.zero	8 
 
-			.align 8
-			.type	f, @object
-			.size	f, 8
-		f:
-			.quad	43 
-// ------------------
-		.ident	"GCC: (GNU) 13.2.0"
-		.section	.note.GNU-stack,"",@progbits
+		.align 8
+		.type	f, @object
+		.size	f, 8
+	f:
+		.quad	43 
+	.ident	"GCC: (GNU) 13.2.0"
+	.section	.note.GNU-stack,"",@progbits
