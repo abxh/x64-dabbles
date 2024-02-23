@@ -32,7 +32,7 @@ section .text
 
             mul rax                 ; rax <- rax * rax
 
-            mov rsp, rbp            ; deallocate 16 bytes from stack
+            mov rsp, rbp            ; deallocate 16 bytes from stack. restore stack pointer.
             pop rbp                 ; pop stack and restore base pointer
             ret                     ; return rax
 
