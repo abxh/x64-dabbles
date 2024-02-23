@@ -7,10 +7,10 @@ section .text
     npow:
         push rbp                    ; push base pointer
         mov rbp, rsp                ; use base pointer as stack pointer
-        sub rsp, 0x16               ; allocate 16 bytes on stack
+        sub rsp, 16                 ; allocate 16 bytes on stack
 
-        %define base     qword [rbp - 0x8]
-        %define exponent qword [rbp - 0x16]
+        %define base     qword [rbp - 8]
+        %define exponent qword [rbp - 16]
 
         mov base, rdi               ; base <- rdi (param1)
         mov exponent, rsi           ; exponent <- rsi (param2)
