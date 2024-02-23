@@ -47,13 +47,13 @@ section .text
             mul rax                 ; rax <- rax * rax
             mul base                ; rax <- rax * base
 
-            mov rsp, rbp            ; deallocate 16 bytes from stack
+            mov rsp, rbp            ; deallocate 16 bytes from stack. restore stack pointer.
             pop rbp                 ; pop stack and restore base pointer
             ret                     ; return rax
 
         case_zero:
             mov rax, 1              ; rax <- 1
 
-            mov rsp, rbp            ; deallocate 16 bytes from stack
+            mov rsp, rbp            ; deallocate 16 bytes from stack. restore stack pointer.
             pop rbp                 ; pop stack and restore base pointer
             ret                     ; return rax
