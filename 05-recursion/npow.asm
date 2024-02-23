@@ -32,7 +32,7 @@ section .text
 
             mul rax                 ; rax <- rax * rax
 
-            mov rsp, rbp            ; deallocate 16 bytes from stack
+            mov rsp, rbp            ; deallocate 16 bytes from stack. restore stack pointer.
             pop rbp                 ; pop stack and restore base pointer
             ret                     ; return rax
 
@@ -40,8 +40,8 @@ section .text
             dec exponent            ; exponent <- exponent - 1
             shr exponent, 1         ; exponent <- exponent >> 1
 
-            mov rdi, base           ; rdi <- base
-            mov rsi, exponent       ; rsi <- exponent
+            mov rdi, base           ; rdi (param1) <- base
+            mov rsi, exponent       ; rsi (param2) <- exponent
             call npow               ; rax <- npow(base, exponent)
 
             mul rax                 ; rax <- rax * rax
