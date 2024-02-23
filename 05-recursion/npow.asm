@@ -6,7 +6,7 @@ section .text
 
     npow:
         push rbp                    ; push base pointer
-        mov rbp, rsp                ; use base pointer as stack pointer
+        mov rbp, rsp                ; save stack pointer
         sub rsp, 0x16               ; allocate 16 bytes on stack
 
         %define base     qword [rbp - 0x8]
