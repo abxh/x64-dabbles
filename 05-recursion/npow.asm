@@ -9,19 +9,17 @@ section .text
         mov rbp, rsp                ; use base pointer as stack pointer
         sub rsp, 16                 ; allocate 16 bytes on stack
 
+        cmp rsi, 0                  ; compare rsi (exponent) and 0
+        je case_zero                ; jump if equal
+
         %define base     qword [rbp - 8]
         %define exponent qword [rbp - 16]
 
         mov base, rdi               ; base <- rdi (param1)
         mov exponent, rsi           ; exponent <- rsi (param2)
 
-        cmp exponent, 0             ; compare exponent and 0
-        je case_zero                ; jump if equal
-
-        mov rax, exponent           ; rax <- exponent
-        and rax, 1                  ; rax <- rax & 1
-        cmp rax, 1                  ; compare rax and 1
-        je case_odd                 ; jump if equal
+        test exponent, 1            ; _ <- exponent & 1
+        jnz case_odd                ; jump if non-zero
 
         case_even:
             shr exponent, 1         ; rax <- exponent >> 1
@@ -53,7 +51,4 @@ section .text
 
         case_zero:
             mov rax, 1              ; rax <- 1
-
-            mov rsp, rbp            ; deallocate 16 bytes from stack. restore stack pointer.
-            pop rbp                 ; pop stack and restore base pointer
             ret                     ; return rax
