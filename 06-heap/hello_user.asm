@@ -82,9 +82,6 @@ section .text
         ; https://stackoverflow.com/a/44876873
         ; https://gist.github.com/nikAizuddin/f4132721126257ec4345
 
-        ; load instruction
-        ; https://azeria-labs.com/memory-instructions-load-and-store-part-4/
-
         ; get current brk addr:
         mov rax, 0xC ; sys_brk != brk in C
         mov rdi, 0
