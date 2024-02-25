@@ -48,9 +48,6 @@ section .data
     syscall
 %endmacro
 
-%macro syscall_brk 1
-%endmacro
-
 %macro syscall_exit 1
     mov rax, 0x3c
     mov rdi, %1
