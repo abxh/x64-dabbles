@@ -112,4 +112,4 @@ section .text
         mov rdi, qword [initial_break]
         syscall
 
-        syscall_exit qword [name_str_len]
+        syscall_exit 0
