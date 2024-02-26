@@ -8,7 +8,6 @@
 ; ascii encoding:
 %define char_null    0
 %define char_newline 10
-%define char_zero    48
 
 section .bss
     name_len_in_chars reserve_bytes 2

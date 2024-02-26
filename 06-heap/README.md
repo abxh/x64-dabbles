@@ -1,4 +1,4 @@
-# working with the heap without stdlib
+# working with the heap without the stdlib
 
 These three sources shown to be helpful:
 - [https://www.youtube.com/watch?v=XV5sRaSVtXQ](https://www.youtube.com/watch?v=XV5sRaSVtXQ)
